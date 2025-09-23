@@ -8,7 +8,7 @@
       "chipFamily": "ESP32-C3",
       "ota": {
         "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/media-ac/media-ac.ota_1.1.bin",
-        "md5": "248fe599227e9435abcc220b3ccf1dae",
+        "md5": "16645daf0a97f7e95dff02bdae08d946",
         "summary": ""
       }
     }
@@ -16,3 +16,4 @@
 
 
 }
+
