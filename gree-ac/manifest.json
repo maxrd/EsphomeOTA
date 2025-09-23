@@ -1,0 +1,16 @@
+{
+  "name": "gree-ac",
+  "version": "1.1",
+  "home_assistant_domain": "esphome",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C3",
+      "ota": {
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/gree-ac/gree-ac.ota_1.1.bin",
+        "md5": "50d6fcb82b407e10986083a7e7ad50dc",
+        "summary": ""
+      }
+    }
+  ]
+}
