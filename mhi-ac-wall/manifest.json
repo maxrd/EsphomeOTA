@@ -1,0 +1,16 @@
+{
+  "name": "Climate-MHI",
+  "version": "1.1",
+  "home_assistant_domain": "esphome",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C3",
+      "ota": {
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-dehumidifier/medole-dehumidifier.ota_1.1.bin",
+        "md5": "9216baf99fa2f433f06b68fa021c1722",
+        "summary": ""
+      }
+    }
+  ]
+}
