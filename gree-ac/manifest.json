@@ -8,9 +8,10 @@
       "chipFamily": "ESP32-C3",
       "ota": {
         "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/gree-ac/gree-ac.ota_1.1.bin",
-        "md5": "50d6fcb82b407e10986083a7e7ad50dc",
+        "md5": "1dc22b55867749935f76399153bc996c",
         "summary": ""
       }
     }
   ]
+
 }
