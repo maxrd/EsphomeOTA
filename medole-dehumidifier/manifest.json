@@ -7,8 +7,8 @@
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/daikin-s21-c3/main/esphome/OTA/daikin-s21-c3.ota_1.1.bin",
-        "md5": "e6a3aeb26980f98cc41d9011f4ae370b",
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-dehumidifier/medole-dehumidifier.ota_1.1.bin",
+        "md5": "9216baf99fa2f433f06b68fa021c1722",
         "summary": "詳請 https://wwww.google.com.tw"
       }
     }
