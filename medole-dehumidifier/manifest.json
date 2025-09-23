@@ -8,7 +8,7 @@
       "chipFamily": "ESP32-C3",
       "ota": {
         "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-dehumidifier/medole-dehumidifier.ota_1.1.bin",
-        "md5": "9216baf99fa2f433f06b68fa021c1722",
+        "md5": "b512a6d35e2fd0f46f537018331e5141",
         "summary": ""
       }
     }
