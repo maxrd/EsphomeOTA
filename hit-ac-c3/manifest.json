@@ -1,5 +1,5 @@
 {
-  "name": "media-ac",
+  "name": "hit-ac-c3",
   "version": "1.1",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": false,
@@ -8,10 +8,11 @@
       "chipFamily": "ESP32-C3",
       "ota": {
         "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/hit-ac-c3/hit-ac-c3.ota_1.1.bin",
-        "md5": "8f6f139280e39def10ccdb866bce7779",
+        "md5": "3e0d6559eb610d910f989cea24c754bd",
         "summary": ""
       }
     }
   ]
+
 
 }
