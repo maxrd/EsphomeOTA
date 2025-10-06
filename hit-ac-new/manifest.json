@@ -7,8 +7,8 @@
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/hit-ac-new/hit-ac-c3.ota.bin",
-        "md5": "4e50193523c6b42d2ecd9d9aab7a4d92",
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/hit-ac-new/hit-ac-c3.ota_1.2.bin",
+        "md5": "3f3485e595bf024b6410782853841b9c",
         "summary": ""
       }
     }
@@ -16,6 +16,7 @@
 
 
 }
+
 
 
 
