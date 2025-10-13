@@ -1,0 +1,19 @@
+{
+  "name": "maxrdnew-4road",
+  "version": "1.0",
+  "home_assistant_domain": "esphome",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C3",
+      "ota": {
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/maxrdnew-4road/maxrdnew-4road.ota_1.0.bin",
+        "md5": "3e0d6559eb610d910f989cea24c754bd",
+        "summary": ""
+      }
+    }
+  ]
+
+
+}
+
