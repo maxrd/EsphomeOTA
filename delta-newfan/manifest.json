@@ -7,8 +7,8 @@
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/hit-ac-c3/delta-newfan.ota_1.0.bin",
-        "md5": "3e0d6559eb610d910f989cea24c754bd",
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/delta-newfan/delta-newfan.ota_1.1.bin",
+        "md5": "94729dbff05ef163757c619b5426e91d",
         "summary": ""
       }
     }
@@ -16,4 +16,5 @@
 
 
 }
+
 
