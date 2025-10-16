@@ -1,13 +1,13 @@
 {
   "name": "hit-ac-c3",
-  "version": "1.2",
+  "version": "1.1",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": false,
   "builds": [
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/delta-newfan/delta-newfan.ota_1.2.bin",
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/delta-newfan/delta-newfan.ota_1.1.bin",
         "md5": "94729dbff05ef163757c619b5426e91d",
         "summary": ""
       }
@@ -16,6 +16,7 @@
 
 
 }
+
 
 
 
