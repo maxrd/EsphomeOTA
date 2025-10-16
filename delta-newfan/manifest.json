@@ -1,5 +1,5 @@
 {
-  "name": "hit-ac-c3",
+  "name": "delta-newfan",
   "version": "1.0",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": false,
@@ -16,6 +16,7 @@
 
 
 }
+
 
 
 
