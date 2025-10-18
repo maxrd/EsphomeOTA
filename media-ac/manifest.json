@@ -7,13 +7,14 @@
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/media-ac/media-ac.ota_1.1.bin",
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/media-ac/media-ac.ota_1.2.bin",
         "md5": "16645daf0a97f7e95dff02bdae08d946",
-        "summary": ""
+        "summary": "**重要提示**  \n> OTA 後可能需要連接 Wi-Fi AP 重新連結到 Home Assistant  \n> 1. 增加關機防霉功能"
       }
     }
   ]
 
 
 }
+
 
