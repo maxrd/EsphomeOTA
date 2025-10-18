@@ -1,14 +1,14 @@
 {
   "name": "media-ac",
-  "version": "1.2",
+  "version": "1.3",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": false,
   "builds": [
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/media-ac/media-ac.ota_1.2.bin",
-        "md5": "b3dc1f15ff079e5e3388eae9a7c17701",
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/media-ac/media-ac.ota_1.3.bin",
+        "md5": "5fb84b771477b4c70721734dd113bdb8",
         "summary": "**重要提示**  \n> OTA 後可能需要連接 Wi-Fi AP 重新連結到 Home Assistant  \n> 1. 增加關機防霉功能"
       }
     }
@@ -16,6 +16,7 @@
 
 
 }
+
 
 
 
