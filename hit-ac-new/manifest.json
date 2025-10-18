@@ -9,13 +9,14 @@
       "ota": {
         "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/hit-ac-new/hit-ac-c3.ota_1.2.bin",
         "md5": "3f3485e595bf024b6410782853841b9c",
-        "summary": ""
+        "summary": "**重要提示**  \n> OTA 後可能需要連接 Wi-Fi AP 重新連結到 Home Assistant  \n> 1. 增加關機防霉功能"
       }
     }
   ]
 
 
 }
+
 
 
 
