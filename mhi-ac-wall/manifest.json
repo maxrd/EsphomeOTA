@@ -1,20 +1,21 @@
 {
   "name": "Climate-MHI",
-  "version": "1.2",
+  "version": "1.3",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": false,
   "builds": [
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/mhi-ac-wall/climate-mhi.ota_1.2.bin",
-        "md5": "34e6a880bdae91af632d8087e711bbfb",
-        "summary": "**重要提示**  \n> OTA 後可能需要連接 Wi-Fi AP 重新連結到 Home Assistant  \n> 1. 增加關機防霉功能"
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/mhi-ac-wall/climate-mhi.ota_1.3.bin",
+        "md5": "1f6f5de540b6378ef92857f927257941",
+        "summary": "**重要提示**  \n> OTA 後可能需要連接 Wi-Fi AP 重新連結到 Home Assistant  \n> **版本：1.3 更新內容**  \n> 1. 增加關機防霉功能  \n> 2. 增加輸入控制温度欄位 \n>3.覆歸回覆先前温度設定"
       }
     }
   ]
 
 }
+
 
 
 
