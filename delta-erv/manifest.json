@@ -7,8 +7,8 @@
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/delta-erv/delta-erv_1.0.bin",
-        "md5": "3e0d6559eb610d910f989cea24c754bd",
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/delta-erv/delta-erv.ota_1.0.bin",
+        "md5": "145cee41aa4e3f70e21b7026d60e4035",
         "summary": ""
       }
     }
@@ -16,4 +16,5 @@
 
 
 }
+
 
