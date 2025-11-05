@@ -8,7 +8,7 @@
       "chipFamily": "ESP32-C3",
       "ota": {
         "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-dehumidifier/medole-dehumidifier.ota_1.2.bin",
-        "md5": "eda157752d4e6fc12625d909a3449172",
+        "md5": "14e75b111c582d36882d6d60d200910a",
         "summary": "> **重要提示**  \n> OTA 後可能需要連接 Wi-Fi AP 重新連結到 Home Assistant  \n>\n> **版本：1.2 更新內容**  \n>1. 增加fan功能 \n>2. 由ha 加入hk 請選擇fan 控制項\n>2. 增加異常sensor"
       }
     }
