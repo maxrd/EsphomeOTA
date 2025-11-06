@@ -1,0 +1,19 @@
+{
+  "name": "dehumidifier-c3",
+  "version": "1.0",
+  "home_assistant_domain": "esphome",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C3",
+      "ota": {
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/dehumidifier-c3/dehumidifier-c3.ota_1.0.bin",
+        "md5": "415264d91ba03a65e43a31ea16df9bf6",
+        "summary": ""
+      }
+    }
+  ]
+
+
+}
+
