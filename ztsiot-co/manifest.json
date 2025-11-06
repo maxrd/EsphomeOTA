@@ -8,7 +8,7 @@
       "chipFamily": "ESP32-C3",
       "ota": {
         "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/ztsiot-co/ztsiot-co.ota_1.0.bin",
-        "md5": "415264d91ba03a65e43a31ea16df9bf6",
+        "md5": "2a83cca0ae1a568e530614c621cbe967",
         "summary": ""
       }
     }
@@ -16,4 +16,5 @@
 
 
 }
+
 
