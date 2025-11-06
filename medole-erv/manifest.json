@@ -7,8 +7,8 @@
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-erv/medole-erv_1.0.bin",
-        "md5": "6a69f54bef490274440f6370844259e6",
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-erv/medole-erv.ota_1.0.bin",
+        "md5": "31d66b5e6868819e3e5df6b070da93be",
         "summary": ""
       }
     }
@@ -16,6 +16,7 @@
 
 
 }
+
 
 
 
