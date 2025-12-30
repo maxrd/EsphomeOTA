@@ -1,0 +1,16 @@
+{
+  "name": "medole-dehumidifier",
+  "version": "1.7",
+  "home_assistant_domain": "esphome",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-C3",
+      "ota": {
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/engo/medole-dehumidifier/medole-dehumidifier.ota_1.7.bin",
+        "md5": "6d22ca569e3412062e24820d31bc55d4",
+        "summary": "> **重要提示**  \n> OTA 後可能需要連接 Wi-Fi AP 重新連結到 Home Assistant  \n>\n> **版本：1.7 更新內容**  \n>1.更新捉取系統資訊錯誤   \n>2.由ha 加入hk 請選擇fan 控制項\n>"
+      }
+    }
+  ]
+}
