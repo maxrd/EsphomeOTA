@@ -7,7 +7,7 @@
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-erv/medole-erv.ota_1.0.bin",
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-erv/medole-erv.ota_1.1.bin",
         "md5": "f4ec85a883de0a378f7e3d36d0556dc7",
         "summary": "update wifu auto default off"
       }
@@ -16,6 +16,7 @@
 
 
 }
+
 
 
 
