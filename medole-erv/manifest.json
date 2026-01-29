@@ -1,6 +1,6 @@
 {
   "name": "medole-erv",
-  "version": "1.0",
+  "version": "1.1",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": false,
   "builds": [
@@ -8,14 +8,15 @@
       "chipFamily": "ESP32-C3",
       "ota": {
         "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-erv/medole-erv.ota_1.0.bin",
-        "md5": "4a08c588e577297c98506e0225fb4e39",
-        "summary": ""
+        "md5": "f4ec85a883de0a378f7e3d36d0556dc7",
+        "summary": "update wifu auto default off"
       }
     }
   ]
 
 
 }
+
 
 
 
