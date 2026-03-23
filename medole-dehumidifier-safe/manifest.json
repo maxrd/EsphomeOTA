@@ -1,14 +1,14 @@
 {
   "name": "medole-dehumidifier-safe",
-  "version": "1.0",
+  "version": "1.0.1",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": false,
   "builds": [
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-dehumidifier-safe/medole-dehumidifier-safe.ota_1.0.0.bin",
-        "md5": "415264d91ba03a65e43a31ea16df9bf6",
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-dehumidifier-safe/medole-dehumidifier-safe.ota_1.0.1.bin",
+        "md5": "dcc8ce7bf0d5d5b2a6baa7012f7dad70",
         "summary": ""
       }
     }
