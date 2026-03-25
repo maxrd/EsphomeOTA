@@ -1,7 +1,7 @@
 {
-  "version": "1.0.3",
-  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/hit-hk/Hitachi-HK-ota_1.0.3.bin",
-  "description": "新增室外温度"
+  "version": "1.0.4",
+  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/hit-hk/Hitachi-HK-ota_1.0.4.bin",
+  "description": "修正室外温度"
 
 }
 
