@@ -1,6 +1,6 @@
 {
-  "version": "1.0.3",
-  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/hit-hk/Hitachi-HK-ota_1.0.3.bin",
+  "version": "1.0.2",
+  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/hit-hk/Hitachi-HK-ota_1.0.2.bin",
   "description": "Fix WiFi issues"
 
 }
