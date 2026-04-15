@@ -1,6 +1,6 @@
 {
-  "version": "1.0.2",
-  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/Climate_AllIN/Climate_AllIN-ota_1.0.2.bin",
-  "description": "更新bug"
+  "version": "1.0.3",
+  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/Climate_AllIN/Climate_AllIN-ota_1.0.3.bin",
+  "description": "更新wifi bug"
 
 }
