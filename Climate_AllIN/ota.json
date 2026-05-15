@@ -1,6 +1,6 @@
 {
   "version": "1.0.5",
-  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/Climate_AllIN/Climate_AllIN-ota_1.0.5.bin",
-  "description": "fix bug"
+  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/Climate_AllIN/Climate_AllIN-ota_1.0.6.bin",
+  "description": "fix wifi hot"
 
 }
