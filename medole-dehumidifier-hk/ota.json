@@ -1,5 +1,5 @@
 {
-  "version": "1.0.4",
-  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-dehumidifier-hk/medole-dehumidifier-HK-ota_1.0.4.bin",
-  "description": "Fix WiFi issues1"
+  "version": "1.0.5",
+  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-dehumidifier-hk/medole-dehumidifier-HK-ota_1.0.5.bin",
+  "description": "增加清淨,換氣運轉"
 }
