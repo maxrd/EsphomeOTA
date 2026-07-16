@@ -1,15 +1,15 @@
 {
   "name": "medole-dehumidifier",
-  "version": "1.8",
+  "version": "1.9",
   "home_assistant_domain": "esphome",
   "new_install_prompt_erase": false,
   "builds": [
     {
       "chipFamily": "ESP32-C3",
       "ota": {
-        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-dehumidifier/medole-dehumidifier.ota_1.8.bin",
-        "md5": "0f960ef6376da5db371aee1a98ebf8bf",
-        "summary": "> **重要提示**  \n> OTA 後可能需要連接 Wi-Fi AP 重新連結到 Home Assistant  \n>\n> **版本：1.8 更新內容**  \n>1.新增送風開關   \n>2.\n>"
+        "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/medole-dehumidifier/medole-dehumidifier.ota_1.9.bin",
+        "md5": "b996daf1b32f4b064a3db1301751929a",
+        "summary": "> **重要提示**  \n> OTA 後可能需要連接 Wi-Fi AP 重新連結到 Home Assistant  \n>\n> **版本：1.9 更新內容**  \n>1.更新按面板送風esphome,不會更新問題   \n>2.\n>"
       }
     }
   ]
