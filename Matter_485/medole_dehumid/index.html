@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>台達 ERV 全熱交換機 — 安裝與配對說明</title>
+<title>米多力除溼機 — 安裝與配對說明</title>
 <style>
   :root{
-    --green:#0a8f5b; --green-d:#076c45; --ink:#1c2530; --muted:#5c6a78;
+    --green:#1f6fb2; --green-d:#155489; --ink:#1c2530; --muted:#5c6a78;
     --line:#e4e9ee; --bg:#f6f8fa; --card:#ffffff; --warn-bg:#fff6e6; --warn-bd:#f0c469;
-    --tip-bg:#e9f6ef; --tip-bd:#8fd3b0; --code-bg:#eef2f5;
+    --tip-bg:#e8f1f9; --tip-bd:#9cc4e6; --code-bg:#eef2f5;
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
@@ -43,7 +43,7 @@
   th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
   th{background:#f0f4f7;font-weight:700;font-size:13px;color:var(--muted)}
   tr:last-child td{border-bottom:0}
-  .grp td{background:#eef6f1;font-weight:700;color:var(--green-d);font-size:13px}
+  .grp td{background:#e8f1f9;font-weight:700;color:var(--green-d);font-size:13px}
   code{background:var(--code-bg);padding:1px 6px;border-radius:5px;font-size:14px;
        font-family:"SF Mono",Consolas,Menlo,monospace}
   .pill{display:inline-block;background:var(--tip-bg);color:var(--green-d);border:1px solid var(--tip-bd);
@@ -60,7 +60,7 @@
 <body>
 <header>
   <div class="badge">MATTER 智慧家庭裝置</div>
-  <h1>台達 ERV 全熱交換機</h1>
+  <h1>米多力除溼機</h1>
   <p>安裝與配對說明 · 支援 Apple 家庭 / Google Home / SmartThings / Alexa</p>
 </header>
 
@@ -68,7 +68,7 @@
 
   <div class="callout tip">
     <b>本機支援 Matter over Wi-Fi</b>
-    只要你的智慧家庭平台支援 Matter,就能將本機加入,並控制電源與風速、內循環、自訂風量、送風/排風風量、旁通模式,同時讀取室內外溫度。
+    只要你的智慧家庭平台支援 Matter,就能將本機加入,並控制電源與風速(弱/中/強)、除濕目標濕度(0~90% 或連續 / 50% / 60% 快速鍵)、淨化、換氣、送風循環,同時讀取室內溫度、濕度與<b>空氣品質(PM2.5 / CO₂ / CO / 揮發性有機物)</b>。
   </div>
 
   <h2><span class="n">1</span>配對前準備</h2>
@@ -81,7 +81,7 @@
     </ul>
     <div class="callout tip" style="margin-bottom:0">
       <b>配對用的 QR / 手動碼在哪裡?</b>
-      在裝置<b>螢幕</b>上:進入設定頁即可看到 Matter 配對 QR 與手動配對碼。設定用的 QR 與「說明書」QR 是不同的兩個。
+      在裝置<b>螢幕</b>上:點右下角 QR 圖示即可看到 Matter 配對 QR 與手動配對碼。配對用的 QR 與「說明書」QR 是不同的兩個。
     </div>
   </div>
 
@@ -124,59 +124,56 @@
   </div>
 
   <h2><span class="n">4</span>配對後會出現哪些元件</h2>
-  <p>本機以 <span class="pill">ERV_Matter_XXXX</span> 名稱加入(XXXX 為裝置序號末碼)。加入後會展開 <b>12 個</b>可控/可讀元件。因為 Matter 元件預設沒有中文名,且多個開關/風扇外觀相同,<b>強烈建議依下表逐一重新命名</b>以便辨識:</p>
+  <p>本機以 <span class="pill">DEHUMID_Matter_XXXX</span> 名稱加入(XXXX 為裝置序號末碼)。加入後會展開 <b>15 個</b>可控/可讀元件,<b>建議依下表逐一重新命名</b>:</p>
   <table>
     <thead><tr><th>App 類型</th><th>功能</th><th>建議命名</th></tr></thead>
     <tbody>
       <tr class="grp"><td colspan="3">基本控制</td></tr>
-      <tr><td>風扇 Fan</td><td>電源開關 + 風速(關 / 低 / 中 / 高)</td><td>ERV 風扇</td></tr>
-      <tr><td>開關 On-Off</td><td>開 = 內循環,關 = 全熱交換<br><b>※ 須先開風扇電源</b></td><td>ERV 內循環</td></tr>
-      <tr class="grp"><td colspan="3">溫度(唯讀)</td></tr>
-      <tr><td>溫度感測器 ①</td><td>外氣溫度</td><td>ERV 外氣溫度</td></tr>
-      <tr><td>溫度感測器 ②</td><td>室內回風溫度</td><td>ERV 室內溫度</td></tr>
-      <tr class="grp"><td colspan="3">自訂風量情境(三選一,對應面板「自訂1/2/3」)</td></tr>
-      <tr><td>開關 On-Off</td><td>啟用自訂風量情境 1</td><td>ERV 自訂1</td></tr>
-      <tr><td>開關 On-Off</td><td>啟用自訂風量情境 2</td><td>ERV 自訂2</td></tr>
-      <tr><td>開關 On-Off</td><td>啟用自訂風量情境 3</td><td>ERV 自訂3</td></tr>
-      <tr class="grp"><td colspan="3">自訂風量:送風 / 排風百分比</td></tr>
-      <tr><td>風扇 Fan(%)</td><td>送風機風量 0–100%(用速度滑桿調整)</td><td>ERV 送風量</td></tr>
-      <tr><td>風扇 Fan(%)</td><td>排風機風量 0–100%(用速度滑桿調整)</td><td>ERV 排風量</td></tr>
-      <tr class="grp"><td colspan="3">旁通模式(三選一,對應面板「旁通」按鈕)</td></tr>
-      <tr><td>開關 On-Off</td><td>全熱模式(預設,經熱回收)</td><td>ERV 旁通-全熱</td></tr>
-      <tr><td>開關 On-Off</td><td>旁通模式(不經熱回收,直接引入外氣)</td><td>ERV 旁通-旁通</td></tr>
-      <tr><td>開關 On-Off</td><td>自動模式(依溫度自動切換)</td><td>ERV 旁通-自動</td></tr>
+      <tr><td>風扇 Fan</td><td>電源開關 + 風速(關 / 弱 / 中 / 強)</td><td>除溼機 風扇</td></tr>
+      <tr><td>開關 On-Off</td><td>電源開關(獨立;與風扇電源同步)</td><td>除溼機 電源</td></tr>
+      <tr><td>開關 On-Off</td><td>淨化(空氣清淨)</td><td>除溼機 淨化</td></tr>
+      <tr><td>開關 On-Off</td><td>換氣</td><td>除溼機 換氣</td></tr>
+      <tr><td>開關 On-Off</td><td>送風循環(離開除濕、進入送風循環模式)</td><td>除溼機 送風</td></tr>
+      <tr class="grp"><td colspan="3">風速快速鍵(互斥)</td></tr>
+      <tr><td>開關 On-Off</td><td>風速弱—快速鍵</td><td>除溼 風速弱</td></tr>
+      <tr><td>開關 On-Off</td><td>風速中—快速鍵</td><td>除溼 風速中</td></tr>
+      <tr><td>開關 On-Off</td><td>風速強—快速鍵</td><td>除溼 風速強</td></tr>
+      <tr class="grp"><td colspan="3">除濕目標濕度</td></tr>
+      <tr><td>風扇 Fan(百分比)</td><td>目標濕度連續調整 0~90%(拉百分比滑桿;0%=連續除濕)</td><td>除溼 目標濕度</td></tr>
+      <tr><td>開關 On-Off</td><td>連續除濕(不設目標濕度)—快速鍵</td><td>除溼 連續</td></tr>
+      <tr><td>開關 On-Off</td><td>除濕至 50%—快速鍵</td><td>除溼 50%</td></tr>
+      <tr><td>開關 On-Off</td><td>除濕至 60%—快速鍵</td><td>除溼 60%</td></tr>
+      <tr class="grp"><td colspan="3">環境感測(唯讀)</td></tr>
+      <tr><td>濕度感測器</td><td>室內相對濕度</td><td>除溼機 濕度</td></tr>
+      <tr><td>溫度感測器</td><td>室內溫度</td><td>除溼機 溫度</td></tr>
+      <tr><td>空氣品質感測器</td><td>PM2.5、CO₂、CO、揮發性有機物(由甲醛換算)</td><td>除溼機 空氣品質</td></tr>
     </tbody>
   </table>
-  <div class="callout warn">
-    <b>多個元件外觀相同,配對後請立刻各別命名</b>
-    HomeKit 會顯示 3 個相同的「風扇」、7 個相同的「開關」與 2 個相同的「溫度感測器」,無法從外觀分辨。<b>建議一加入就依上表逐一重新命名</b>,避免日後混淆。
+  <div class="callout tip" style="margin-bottom:0">
+    <b>風速快速鍵與電源開關</b>
+    「風速弱/中/強」三顆為<b>互斥</b>開關,與「除溼機 風扇」的風速、以及面板即時同步(開一顆另兩顆自動關)。「除溼機 電源」為獨立電源開關,與風扇電源同一狀態。這些是方便語音/自動化用的額外捷徑,不喜歡可在 App 隱藏。
   </div>
   <div class="callout tip">
-    <b>三選一互斥怎麼運作?</b>
-    「自訂1/2/3」與「旁通 全熱/旁通/自動」各自是一組<b>三選一</b>開關:開啟其中一個,同組另外兩個會自動關閉。這是刻意設計,對應面板上單一的選擇狀態。
+    <b>除濕目標濕度怎麼設定?</b>
+    有兩種方式,控制的是同一個目標值:①「除溼 目標濕度」風扇拉<b>百分比滑桿</b>可連續設 0~90%(0%=連續除濕);②「連續 / 50% / 60%」三顆<b>互斥</b>開關為常用快速鍵,開啟其中一顆另兩顆自動關閉。與<b>裝置面板</b>即時同步,任一邊調整都會反映到其他控制。
   </div>
 
   <h2><span class="n">5</span>使用說明</h2>
   <div class="card">
     <h3 style="margin-top:2px">風扇(電源 + 風速)</h3>
-    <p>關 = 停機;低 / 中 / 高 = 開機並切換固定風速。其餘所有功能都需<b>先開風扇電源</b>才能操作。</p>
-
-    <h3>內循環(全熱交換 ↔ 內循環)</h3>
-    <p><b>關</b> = 全熱交換模式(引入外氣並與室內做熱回收);<b>開</b> = 內循環模式(僅室內循環,不引入外氣)。</p>
-
-    <h3>自訂風量情境(自訂1 / 2 / 3)</h3>
-    <p>三組可各自設定送風/排風風量的情境。開啟其中一個(例如「自訂1」)即進入自訂風量模式,再用「送風量」「排風量」兩個風扇元件的速度滑桿設定該情境的百分比。切換到「低/中/高」固定風速時,自訂風量會自動停用。</p>
-
-    <h3>送風量 / 排風量(0–100%)</h3>
-    <p>在自訂風量模式下,拖動速度滑桿即可分別調整送風機、排風機的風量百分比。<b>提示:</b>若目前不在自訂模式就直接拉滑桿,系統會自動切到「自訂1」再套用,不需先手動開自訂開關。</p>
-
-    <h3>旁通模式(全熱 / 旁通 / 自動)</h3>
-    <p><b>全熱</b> = 外氣經熱交換芯做熱回收(預設);<b>旁通</b> = 外氣不經熱回收直接引入(適合中介季節換氣);<b>自動</b> = 依室內外溫度自動決定是否旁通。需先開風扇電源才能切換。</p>
-
-    <div class="callout tip" style="margin:8px 0 0">
-      <b>多數功能需先開電源</b>
-      內循環、旁通模式在風扇電源未開時無法開啟,在 App 切開會自動彈回。請先開風扇,再操作其他功能。
-    </div>
+    <p>關 = 停機;弱 / 中 / 強 = 開機並切換風速。</p>
+    <h3>除濕目標濕度(0~90%)</h3>
+    <p>用「除溼 目標濕度」風扇的<b>百分比滑桿</b>連續設定目標相對濕度(0~90%,0%=連續除濕),達到目標即降載。另提供「連續 / 50% / 60%」三顆互斥開關作常用快速鍵。兩者控制同一目標值,面板上也有 −／＋ 微調鈕(每次 5%),全部即時同步。</p>
+    <h3>淨化 / 換氣</h3>
+    <p>各為獨立開關,可隨時開啟或關閉,對應面板上的「淨化」「換氣」按鈕。</p>
+    <h3>送風循環</h3>
+    <p>開啟時機器離開除濕、進入送風循環模式(只吹風不除濕),並沿用<b>目前的風速</b>;關閉時切回除濕模式。送風為互斥運轉模式,因此在送風開啟時去操作<b>風速或除濕濕度</b>會<b>先自動關閉送風</b>再執行(面板與 App 皆同)。狀態由裝置回讀同步(面板、App、機器三邊一致)。</p>
+    <h3>空氣品質(唯讀)</h3>
+    <p>App 可讀取 <b>PM2.5、CO₂、CO 濃度與揮發性有機物密度</b>(甲醛換算),以及一個空氣品質總評(良好 / 普通 / …)。實際顯示項目視平台而定:Apple 家庭無「甲醛」欄位,故以「揮發性有機物」呈現;Home Assistant / Google 則另可看到甲醛值。面板也會同步顯示 PM2.5 / CO₂ / CH₂O / CO 數值(視機種感測器而定)。</p>
+    <h3>溫度 / 濕度</h3>
+    <p>App 可讀取室內溫度與相對濕度(唯讀)。</p>
+    <h3>排水</h3>
+    <p>面板顯示排水狀態:正常時「排水正常」(綠底);異常(水箱滿 / 排水不順)時「排水異常」(紅底閃爍)並停止除濕,請清空水箱或檢查排水。</p>
   </div>
 
   <h2><span class="n">6</span>疑難排解</h2>
@@ -189,29 +186,27 @@
     </ul>
     <h3>顯示「配件未經認證」</h3>
     <p style="margin-top:4px">屬測試階段正常現象,點「仍要加入」即可。</p>
-    <h3>內循環 / 旁通開不起來</h3>
-    <p style="margin-top:4px">請先開啟風扇電源;電源關閉時,內循環與旁通模式都無法開啟(在 App 會自動彈回關閉)。</p>
-    <h3>送風/排風滑桿拉了沒反應</h3>
-    <p style="margin-top:4px">送風/排風風量只在自訂風量模式(自訂1/2/3)下生效;固定風速(低/中/高)下滑桿會被鎖定。系統通常會在拉滑桿時自動切到自訂1,若仍無效請先手動開啟任一「自訂」開關。</p>
-    <h3>兩組開關/風扇分不清楚</h3>
-    <p style="margin-top:4px">依第 4 節表格逐一重新命名。同組三選一開關(自訂、旁通)一次只會有一個處於開啟狀態。</p>
+    <h3>裝置不除濕 / 一直停機</h3>
+    <p style="margin-top:4px">檢查水箱是否已滿或排水是否順暢(面板顯示「排水異常」紅底閃爍);排水異常時會停止除濕,清空水箱或排除後恢復。</p>
     <h3>要重新配對</h3>
-    <p style="margin-top:4px">先在 App 移除本裝置,再依第 2 節重新加入(更換平台或設定異常時亦同)。</p>
+    <p style="margin-top:4px">先在 App 移除本裝置,再依第 2 節重新加入。也可在裝置螢幕的資訊頁「長按 10 秒恢復出廠」。</p>
   </div>
 
   <h2><span class="n">7</span>技術資訊</h2>
   <div class="card">
     <div class="kv"><span>連線方式</span><span>Matter over Wi-Fi (2.4GHz)</span></div>
-    <div class="kv"><span>裝置類型</span><span>全熱交換機 (ERV)</span></div>
-    <div class="kv"><span>製造商 / 型號</span><span>Delta / Delta-ERV</span></div>
-    <div class="kv"><span>元件數</span><span>共 12 個</span></div>
-    <div class="kv"><span>· 風扇</span><span>主風扇 ×1、送風% ×1、排風% ×1</span></div>
-    <div class="kv"><span>· 開關</span><span>內循環 ×1、自訂1/2/3 ×3、旁通 全熱/旁通/自動 ×3</span></div>
-    <div class="kv"><span>· 溫度感測器</span><span>外氣 ×1、室內 ×1</span></div>
+    <div class="kv"><span>裝置類型</span><span>除溼機 (Dehumidifier)</span></div>
+    <div class="kv"><span>製造商 / 型號</span><span>Medole / Medole-DEHUMID</span></div>
+    <div class="kv"><span>元件數</span><span>共 15 個</span></div>
+    <div class="kv"><span>· 風扇</span><span>電源 + 風速 ×1</span></div>
+    <div class="kv"><span>· 開關</span><span>電源 ×1、淨化 ×1、換氣 ×1、送風循環 ×1</span></div>
+    <div class="kv"><span>· 風速快速鍵</span><span>弱 / 中 / 強 互斥開關 ×3</span></div>
+    <div class="kv"><span>· 除濕目標濕度</span><span>0~90% 百分比風扇 ×1 + 連續 / 50% / 60% 快速鍵開關 ×3</span></div>
+    <div class="kv"><span>· 感測器</span><span>濕度 ×1、溫度 ×1、空氣品質 ×1(PM2.5 / CO₂ / CO / 揮發性有機物 / 甲醛)</span></div>
   </div>
 
   <footer>
-    台達 ERV 全熱交換機 · Matter 安裝說明<br>
+    米多力除溼機 · Matter 安裝說明<br>
     內容如有更新以最新版本為準
   </footer>
 

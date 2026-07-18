@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>台達 ERV 全熱交換機 — 安裝與配對說明</title>
+<title>太一除溼機 — 安裝與配對說明</title>
 <style>
   :root{
-    --green:#0a8f5b; --green-d:#076c45; --ink:#1c2530; --muted:#5c6a78;
+    --green:#4a5fc1; --green-d:#374aa0; --ink:#1c2530; --muted:#5c6a78;
     --line:#e4e9ee; --bg:#f6f8fa; --card:#ffffff; --warn-bg:#fff6e6; --warn-bd:#f0c469;
-    --tip-bg:#e9f6ef; --tip-bd:#8fd3b0; --code-bg:#eef2f5;
+    --tip-bg:#eceffa; --tip-bd:#b6c0ee; --code-bg:#eef2f5;
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
@@ -43,7 +43,7 @@
   th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
   th{background:#f0f4f7;font-weight:700;font-size:13px;color:var(--muted)}
   tr:last-child td{border-bottom:0}
-  .grp td{background:#eef6f1;font-weight:700;color:var(--green-d);font-size:13px}
+  .grp td{background:#eceffa;font-weight:700;color:var(--green-d);font-size:13px}
   code{background:var(--code-bg);padding:1px 6px;border-radius:5px;font-size:14px;
        font-family:"SF Mono",Consolas,Menlo,monospace}
   .pill{display:inline-block;background:var(--tip-bg);color:var(--green-d);border:1px solid var(--tip-bd);
@@ -60,7 +60,7 @@
 <body>
 <header>
   <div class="badge">MATTER 智慧家庭裝置</div>
-  <h1>台達 ERV 全熱交換機</h1>
+  <h1>太一除溼機</h1>
   <p>安裝與配對說明 · 支援 Apple 家庭 / Google Home / SmartThings / Alexa</p>
 </header>
 
@@ -68,7 +68,7 @@
 
   <div class="callout tip">
     <b>本機支援 Matter over Wi-Fi</b>
-    只要你的智慧家庭平台支援 Matter,就能將本機加入,並控制電源與風速、內循環、自訂風量、送風/排風風量、旁通模式,同時讀取室內外溫度。
+    只要你的智慧家庭平台支援 Matter,就能將本機加入,以恆溫器(Thermostat)方式開關除濕運轉並設定溫度,並控制風速,同時讀取室內溫度。送風模式與定時開關機在裝置面板操作。
   </div>
 
   <h2><span class="n">1</span>配對前準備</h2>
@@ -81,7 +81,7 @@
     </ul>
     <div class="callout tip" style="margin-bottom:0">
       <b>配對用的 QR / 手動碼在哪裡?</b>
-      在裝置<b>螢幕</b>上:進入設定頁即可看到 Matter 配對 QR 與手動配對碼。設定用的 QR 與「說明書」QR 是不同的兩個。
+      在裝置<b>螢幕</b>上:點右下角 QR 圖示即可看到 Matter 配對 QR 與手動配對碼。配對用的 QR 與「說明書」QR 是不同的兩個。
     </div>
   </div>
 
@@ -92,7 +92,7 @@
       <li>用相機對準<b>裝置螢幕上的 Matter QR</b>掃描(或選「更多選項」手動輸入配對碼)。</li>
       <li>出現「<b>此配件未經認證</b>」提示時,點「<b>仍要加入</b>」繼續(見下方說明)。</li>
       <li>等待連線與設定(約 1–3 分鐘,請保持裝置與手機在 Wi-Fi 範圍內)。</li>
-      <li>本機一次會帶入<b>多個元件</b>,請依畫面逐一為每個元件命名並指定房間(見第 4 節)。</li>
+      <li>本機一次會帶入<b>恆溫器與風扇兩個元件</b>,請依畫面命名並指定房間(見第 4 節)。</li>
     </ol>
     <div class="callout warn" style="margin-bottom:0">
       <b>為什麼會出現「未經認證」?</b>
@@ -124,59 +124,27 @@
   </div>
 
   <h2><span class="n">4</span>配對後會出現哪些元件</h2>
-  <p>本機以 <span class="pill">ERV_Matter_XXXX</span> 名稱加入(XXXX 為裝置序號末碼)。加入後會展開 <b>12 個</b>可控/可讀元件。因為 Matter 元件預設沒有中文名,且多個開關/風扇外觀相同,<b>強烈建議依下表逐一重新命名</b>以便辨識:</p>
+  <p>本機以 <span class="pill">TAIYI_Matter_XXXX</span> 名稱加入(XXXX 為裝置序號末碼)。加入後會展開 <b>2 個</b>元件:</p>
   <table>
     <thead><tr><th>App 類型</th><th>功能</th><th>建議命名</th></tr></thead>
     <tbody>
-      <tr class="grp"><td colspan="3">基本控制</td></tr>
-      <tr><td>風扇 Fan</td><td>電源開關 + 風速(關 / 低 / 中 / 高)</td><td>ERV 風扇</td></tr>
-      <tr><td>開關 On-Off</td><td>開 = 內循環,關 = 全熱交換<br><b>※ 須先開風扇電源</b></td><td>ERV 內循環</td></tr>
-      <tr class="grp"><td colspan="3">溫度(唯讀)</td></tr>
-      <tr><td>溫度感測器 ①</td><td>外氣溫度</td><td>ERV 外氣溫度</td></tr>
-      <tr><td>溫度感測器 ②</td><td>室內回風溫度</td><td>ERV 室內溫度</td></tr>
-      <tr class="grp"><td colspan="3">自訂風量情境(三選一,對應面板「自訂1/2/3」)</td></tr>
-      <tr><td>開關 On-Off</td><td>啟用自訂風量情境 1</td><td>ERV 自訂1</td></tr>
-      <tr><td>開關 On-Off</td><td>啟用自訂風量情境 2</td><td>ERV 自訂2</td></tr>
-      <tr><td>開關 On-Off</td><td>啟用自訂風量情境 3</td><td>ERV 自訂3</td></tr>
-      <tr class="grp"><td colspan="3">自訂風量:送風 / 排風百分比</td></tr>
-      <tr><td>風扇 Fan(%)</td><td>送風機風量 0–100%(用速度滑桿調整)</td><td>ERV 送風量</td></tr>
-      <tr><td>風扇 Fan(%)</td><td>排風機風量 0–100%(用速度滑桿調整)</td><td>ERV 排風量</td></tr>
-      <tr class="grp"><td colspan="3">旁通模式(三選一,對應面板「旁通」按鈕)</td></tr>
-      <tr><td>開關 On-Off</td><td>全熱模式(預設,經熱回收)</td><td>ERV 旁通-全熱</td></tr>
-      <tr><td>開關 On-Off</td><td>旁通模式(不經熱回收,直接引入外氣)</td><td>ERV 旁通-旁通</td></tr>
-      <tr><td>開關 On-Off</td><td>自動模式(依溫度自動切換)</td><td>ERV 旁通-自動</td></tr>
+      <tr><td>恆溫器 Thermostat</td><td>開關(關 / 除濕運轉)+ 設定溫度(5~40°C)+ 室內溫度(唯讀)</td><td>除溼機 恆溫</td></tr>
+      <tr><td>風扇 Fan</td><td>風速:自動 / 低 / 中 / 高</td><td>除溼機 風速</td></tr>
     </tbody>
   </table>
-  <div class="callout warn">
-    <b>多個元件外觀相同,配對後請立刻各別命名</b>
-    HomeKit 會顯示 3 個相同的「風扇」、7 個相同的「開關」與 2 個相同的「溫度感測器」,無法從外觀分辨。<b>建議一加入就依上表逐一重新命名</b>,避免日後混淆。
-  </div>
   <div class="callout tip">
-    <b>三選一互斥怎麼運作?</b>
-    「自訂1/2/3」與「旁通 全熱/旁通/自動」各自是一組<b>三選一</b>開關:開啟其中一個,同組另外兩個會自動關閉。這是刻意設計,對應面板上單一的選擇狀態。
+    <b>App 上怎麼操作</b>
+    本機為控溫式除濕機,Matter 恆溫器只提供 <b>關 / 開(除濕運轉)</b> 與設定溫度:開啟即進入除濕運轉,達到設定溫度即降載。<b>送風模式與定時開關機</b>請在<b>裝置面板</b>操作(定時屬單機排程,Matter 平台本身已可做自動化,故 App 不重複提供)。
   </div>
 
   <h2><span class="n">5</span>使用說明</h2>
   <div class="card">
-    <h3 style="margin-top:2px">風扇(電源 + 風速)</h3>
-    <p>關 = 停機;低 / 中 / 高 = 開機並切換固定風速。其餘所有功能都需<b>先開風扇電源</b>才能操作。</p>
-
-    <h3>內循環(全熱交換 ↔ 內循環)</h3>
-    <p><b>關</b> = 全熱交換模式(引入外氣並與室內做熱回收);<b>開</b> = 內循環模式(僅室內循環,不引入外氣)。</p>
-
-    <h3>自訂風量情境(自訂1 / 2 / 3)</h3>
-    <p>三組可各自設定送風/排風風量的情境。開啟其中一個(例如「自訂1」)即進入自訂風量模式,再用「送風量」「排風量」兩個風扇元件的速度滑桿設定該情境的百分比。切換到「低/中/高」固定風速時,自訂風量會自動停用。</p>
-
-    <h3>送風量 / 排風量(0–100%)</h3>
-    <p>在自訂風量模式下,拖動速度滑桿即可分別調整送風機、排風機的風量百分比。<b>提示:</b>若目前不在自訂模式就直接拉滑桿,系統會自動切到「自訂1」再套用,不需先手動開自訂開關。</p>
-
-    <h3>旁通模式(全熱 / 旁通 / 自動)</h3>
-    <p><b>全熱</b> = 外氣經熱交換芯做熱回收(預設);<b>旁通</b> = 外氣不經熱回收直接引入(適合中介季節換氣);<b>自動</b> = 依室內外溫度自動決定是否旁通。需先開風扇電源才能切換。</p>
-
-    <div class="callout tip" style="margin:8px 0 0">
-      <b>多數功能需先開電源</b>
-      內循環、旁通模式在風扇電源未開時無法開啟,在 App 切開會自動彈回。請先開風扇,再操作其他功能。
-    </div>
+    <h3 style="margin-top:2px">開關與設定溫度</h3>
+    <p>在恆溫器元件開啟(除濕運轉)或關閉,並調整設定溫度(5~40°C)。面板上另有除濕 / 送風模式按鈕、設定溫度 +/-,以及底部的定時開機/關機設定。</p>
+    <h3>風速(自動 / 低 / 中 / 高)</h3>
+    <p>在風扇元件切換風速;「自動」由機台依環境自行調整。</p>
+    <h3>室內溫度 / 故障顯示</h3>
+    <p>App 恆溫器會顯示目前室內溫度(唯讀);面板另會顯示壓縮機運轉指示與故障代碼。</p>
   </div>
 
   <h2><span class="n">6</span>疑難排解</h2>
@@ -189,29 +157,24 @@
     </ul>
     <h3>顯示「配件未經認證」</h3>
     <p style="margin-top:4px">屬測試階段正常現象,點「仍要加入」即可。</p>
-    <h3>內循環 / 旁通開不起來</h3>
-    <p style="margin-top:4px">請先開啟風扇電源;電源關閉時,內循環與旁通模式都無法開啟(在 App 會自動彈回關閉)。</p>
-    <h3>送風/排風滑桿拉了沒反應</h3>
-    <p style="margin-top:4px">送風/排風風量只在自訂風量模式(自訂1/2/3)下生效;固定風速(低/中/高)下滑桿會被鎖定。系統通常會在拉滑桿時自動切到自訂1,若仍無效請先手動開啟任一「自訂」開關。</p>
-    <h3>兩組開關/風扇分不清楚</h3>
-    <p style="margin-top:4px">依第 4 節表格逐一重新命名。同組三選一開關(自訂、旁通)一次只會有一個處於開啟狀態。</p>
+    <h3>App 看不到送風 / 定時</h3>
+    <p style="margin-top:4px">屬正常:送風模式與定時開關機僅在裝置面板提供,Matter App 端不顯示。</p>
     <h3>要重新配對</h3>
-    <p style="margin-top:4px">先在 App 移除本裝置,再依第 2 節重新加入(更換平台或設定異常時亦同)。</p>
+    <p style="margin-top:4px">先在 App 移除本裝置,再依第 2 節重新加入。也可在裝置螢幕的資訊頁「長按 10 秒恢復出廠」。</p>
   </div>
 
   <h2><span class="n">7</span>技術資訊</h2>
   <div class="card">
     <div class="kv"><span>連線方式</span><span>Matter over Wi-Fi (2.4GHz)</span></div>
-    <div class="kv"><span>裝置類型</span><span>全熱交換機 (ERV)</span></div>
-    <div class="kv"><span>製造商 / 型號</span><span>Delta / Delta-ERV</span></div>
-    <div class="kv"><span>元件數</span><span>共 12 個</span></div>
-    <div class="kv"><span>· 風扇</span><span>主風扇 ×1、送風% ×1、排風% ×1</span></div>
-    <div class="kv"><span>· 開關</span><span>內循環 ×1、自訂1/2/3 ×3、旁通 全熱/旁通/自動 ×3</span></div>
-    <div class="kv"><span>· 溫度感測器</span><span>外氣 ×1、室內 ×1</span></div>
+    <div class="kv"><span>裝置類型</span><span>除溼機 / 恆溫器 (Thermostat)</span></div>
+    <div class="kv"><span>製造商 / 型號</span><span>Taiyi / Taiyi-DEHUMID</span></div>
+    <div class="kv"><span>元件數</span><span>共 2 個</span></div>
+    <div class="kv"><span>· 恆溫器</span><span>開關(除濕運轉) + 設定溫度 + 室內溫度</span></div>
+    <div class="kv"><span>· 風扇</span><span>Off/Low/Med/High/Auto</span></div>
   </div>
 
   <footer>
-    台達 ERV 全熱交換機 · Matter 安裝說明<br>
+    太一除溼機 · Matter 安裝說明<br>
     內容如有更新以最新版本為準
   </footer>
 
