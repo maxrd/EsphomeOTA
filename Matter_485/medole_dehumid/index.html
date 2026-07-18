@@ -124,7 +124,7 @@
   </div>
 
   <h2><span class="n">4</span>配對後會出現哪些元件</h2>
-  <p>本機以 <span class="pill">DEHUMID_Matter_XXXX</span> 名稱加入(XXXX 為裝置序號末碼)。加入後會展開 <b>15 個</b>可控/可讀元件,<b>建議依下表逐一重新命名</b>:</p>
+  <p>本機以 <span class="pill">DEHUMID_Matter_XXXX</span> 名稱加入(XXXX 為裝置序號末碼)。加入後會展開 <b>16 個</b>可控/可讀元件,<b>建議依下表逐一重新命名</b>:</p>
   <table>
     <thead><tr><th>App 類型</th><th>功能</th><th>建議命名</th></tr></thead>
     <tbody>
@@ -147,6 +147,7 @@
       <tr><td>濕度感測器</td><td>室內相對濕度</td><td>除溼機 濕度</td></tr>
       <tr><td>溫度感測器</td><td>室內溫度</td><td>除溼機 溫度</td></tr>
       <tr><td>空氣品質感測器</td><td>PM2.5、CO₂、CO、揮發性有機物(由甲醛換算)</td><td>除溼機 空氣品質</td></tr>
+      <tr><td>漏水感測器</td><td>排水狀態(排水異常 / 水箱滿 → 偵測到漏水)</td><td>除溼機 排水</td></tr>
     </tbody>
   </table>
   <div class="callout tip" style="margin-bottom:0">
@@ -173,7 +174,7 @@
     <h3>溫度 / 濕度</h3>
     <p>App 可讀取室內溫度與相對濕度(唯讀)。</p>
     <h3>排水</h3>
-    <p>面板顯示排水狀態:正常時「排水正常」(綠底);異常(水箱滿 / 排水不順)時「排水異常」(紅底閃爍)並停止除濕,請清空水箱或檢查排水。</p>
+    <p>面板顯示排水狀態:正常時「排水正常」(綠底);異常(水箱滿 / 排水不順)時「排水異常」(紅底閃爍)並停止除濕,請清空水箱或檢查排水。此狀態也會回報到 App 的<b>「除溼機 排水」漏水感測器</b>——排水異常時顯示「偵測到漏水」,可用來設定通知或自動化。</p>
   </div>
 
   <h2><span class="n">6</span>疑難排解</h2>
@@ -197,12 +198,12 @@
     <div class="kv"><span>連線方式</span><span>Matter over Wi-Fi (2.4GHz)</span></div>
     <div class="kv"><span>裝置類型</span><span>除溼機 (Dehumidifier)</span></div>
     <div class="kv"><span>製造商 / 型號</span><span>Medole / Medole-DEHUMID</span></div>
-    <div class="kv"><span>元件數</span><span>共 15 個</span></div>
+    <div class="kv"><span>元件數</span><span>共 16 個</span></div>
     <div class="kv"><span>· 風扇</span><span>電源 + 風速 ×1</span></div>
     <div class="kv"><span>· 開關</span><span>電源 ×1、淨化 ×1、換氣 ×1、送風循環 ×1</span></div>
     <div class="kv"><span>· 風速快速鍵</span><span>弱 / 中 / 強 互斥開關 ×3</span></div>
     <div class="kv"><span>· 除濕目標濕度</span><span>0~90% 百分比風扇 ×1 + 連續 / 50% / 60% 快速鍵開關 ×3</span></div>
-    <div class="kv"><span>· 感測器</span><span>濕度 ×1、溫度 ×1、空氣品質 ×1(PM2.5 / CO₂ / CO / 揮發性有機物 / 甲醛)</span></div>
+    <div class="kv"><span>· 感測器</span><span>濕度 ×1、溫度 ×1、空氣品質 ×1(PM2.5 / CO₂ / CO / 揮發性有機物 / 甲醛)、漏水 ×1(排水狀態)</span></div>
   </div>
 
   <footer>
