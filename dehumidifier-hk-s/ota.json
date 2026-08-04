@@ -1,6 +1,6 @@
 {
-  "version": "1.0.4",
-  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/dehumidifier-hk-s/Dehumidifier_HK_1.0.4.bin",
-  "description": "fix wifi reconntor"
+  "version": "1.0.5",
+  "url": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/dehumidifier-hk-s/Dehumidifier_HK_1.0.5.bin",
+  "description": "更新homekit上電無法同步"
 
 }
