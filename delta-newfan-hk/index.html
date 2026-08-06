@@ -364,23 +364,33 @@
     </section>
 
     <section>
-      <h2><span class="ic">📲</span>首次配對</h2>
+      <h2><span class="ic">📶</span>第一步:設定 Wi-Fi 連線</h2>
+      <p>加入 HomeKit 前,設備必須先連上你家的 Wi-Fi。首次上電(或尚未設定過)時,設備會自動開啟一個設定用熱點。</p>
       <ol class="steps">
-        <li>打開 iPhone / iPad 的「家庭」App,點右上角 <strong>＋ → 加入配件</strong>。</li>
+        <li>用手機的 Wi-Fi 設定,連上名稱為 <code>delta-newfan-hk_XXXX</code> 的熱點(<span class="muted">XXXX 為裝置 MAC 末四碼,無需密碼</span>)。</li>
+        <li>手機通常會自動彈出設定網頁;若沒有,請開啟瀏覽器輸入 <code>192.168.4.1</code>。</li>
+        <li>在頁面輸入你家 <strong>Wi-Fi 名稱(SSID)與密碼</strong>,按送出。</li>
+        <li>設備開始連線;成功後設定熱點會自動關閉,<strong>指示燈轉為恆亮</strong>代表已上網。</li>
+      </ol>
+      <div class="note warn"><strong>注意:</strong>ESP32 僅支援 <strong>2.4GHz</strong> Wi-Fi,請勿選 5GHz 網路。若連線失敗,設備會重新開啟設定熱點供你再試。</div>
+      <div class="note muted">日後要更換 Wi-Fi:長按機身重置鍵約 10 秒回復出廠設定,重新開機後即可再次配網(HomeKit 配對也會一併清除,需重新加入)。</div>
+    </section>
+
+    <section>
+      <h2><span class="ic">📲</span>第二步:加入 HomeKit</h2>
+      <ol class="steps">
+        <li>確認 iPhone / iPad 與設備連在<strong>同一個 Wi-Fi 網路</strong>。</li>
+        <li>打開「家庭」App,點右上角 <strong>＋ → 加入配件</strong>。</li>
         <li>掃描設備上的 <strong>HomeKit 設定碼(QR Code)</strong>,或手動輸入 8 位數配對碼。</li>
         <li>依畫面指示指定房間並命名,即完成加入。</li>
       </ol>
-      <div class="note muted">設備需先連上與 iPhone 同一個 Wi-Fi 網路。若配對失敗,請確認設備已開機且指示燈為恆亮(已連網)。</div>
+      <div class="note muted">若配對失敗,請確認設備已開機且指示燈為恆亮(已連網)。</div>
     </section>
 
     <section>
       <h2><span class="ic">❓</span>常見問題</h2>
       <h3>關掉「低風量」後,為什麼機器變成待機而不是關機?</h3>
       <p>因為關掉運轉模式只是「停止送風」,電源仍開著,所以進入待機。要整台停機請關「電源」。</p>
-      <h3>多段調速的滑桿在「家庭」App 看起來像百分比?</h3>
-      <p>Apple「家庭」App 的風扇滑桿以填充比例顯示;實際對應 1–17 段。使用 Eve 等第三方 HomeKit App 可看到明確的段位數字。</p>
-      <h3>用原廠面板操作,HomeKit 會同步嗎?</h3>
-      <p>會。設備會定期回讀狀態,面板上的變更會反映到「家庭」App 對應的控制格。</p>
     </section>
 
     <footer>
