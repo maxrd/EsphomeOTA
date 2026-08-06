@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台達新風機 · HomeKit 使用說明</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --fg: #1c2024;
+      --muted: #5b6470;
+      --line: #e4e7eb;
+      --accent: #0a84ff;
+      --accent-soft: #e7f1ff;
+      --ok: #1a8a4b;
+      --warn: #b4690e;
+      --chip: #eef1f4;
+      --shadow: 0 1px 3px rgba(0, 0, 0, .06), 0 6px 20px rgba(0, 0, 0, .05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --card: #171a20;
+        --fg: #e8eaed;
+        --muted: #9aa4b1;
+        --line: #262b33;
+        --accent: #4c9dff;
+        --accent-soft: #16283f;
+        --ok: #4cc47f;
+        --warn: #e0a341;
+        --chip: #20252d;
+        --shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 6px 24px rgba(0, 0, 0, .35);
+      }
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, "PingFang TC", "Noto Sans TC", Roboto, "Microsoft JhengHei", sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 80px
+    }
+
+    header {
+      text-align: center;
+      padding: 24px 0 8px
+    }
+
+    header h1 {
+      font-size: 1.7rem;
+      margin: .2em 0
+    }
+
+    header p {
+      color: var(--muted);
+      margin: .2em 0
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 3px 12px;
+      font-size: .8rem;
+      font-weight: 600;
+      margin-top: 8px
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 24px;
+      margin: 20px 0;
+      box-shadow: var(--shadow)
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin: .1em 0 .6em;
+      display: flex;
+      align-items: center;
+      gap: .5em
+    }
+
+    h2 .ic {
+      font-size: 1.3em
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      margin: 1.1em 0 .3em
+    }
+
+    p,
+    li {
+      color: var(--fg)
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    ul {
+      padding-left: 1.2em
+    }
+
+    li {
+      margin: .3em 0
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: .6em 0;
+      font-size: .95rem;
+      display: block;
+      overflow-x: auto
+    }
+
+    th,
+    td {
+      border: 1px solid var(--line);
+      padding: 9px 12px;
+      text-align: left;
+      vertical-align: top
+    }
+
+    th {
+      background: var(--chip);
+      font-weight: 600;
+      white-space: nowrap
+    }
+
+    code {
+      background: var(--chip);
+      border-radius: 6px;
+      padding: 1px 6px;
+      font-size: .9em;
+      font-family: "SF Mono", ui-monospace, Menlo, Consolas, monospace
+    }
+
+    .tile {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .tile:first-of-type {
+      border-top: none
+    }
+
+    .tile .em {
+      font-size: 1.7rem;
+      line-height: 1;
+      flex: 0 0 auto;
+      width: 40px;
+      text-align: center
+    }
+
+    .tile .body {
+      flex: 1
+    }
+
+    .tile h3 {
+      margin: .1em 0 .25em
+    }
+
+    .note {
+      border-left: 3px solid var(--accent);
+      background: var(--accent-soft);
+      border-radius: 0 10px 10px 0;
+      padding: 10px 14px;
+      margin: 12px 0
+    }
+
+    .warn {
+      border-left-color: var(--warn);
+      background: transparent
+    }
+
+    .warn strong {
+      color: var(--warn)
+    }
+
+    .pill {
+      display: inline-block;
+      background: var(--chip);
+      border-radius: 8px;
+      padding: 2px 9px;
+      font-size: .82rem;
+      margin: 2px 4px 2px 0
+    }
+
+    .steps {
+      counter-reset: s;
+      list-style: none;
+      padding-left: 0
+    }
+
+    .steps li {
+      counter-increment: s;
+      position: relative;
+      padding-left: 2.2em;
+      margin: .5em 0
+    }
+
+    .steps li::before {
+      content: counter(s);
+      position: absolute;
+      left: 0;
+      top: .05em;
+      width: 1.6em;
+      height: 1.6em;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .8rem;
+      font-weight: 700
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+      margin-top: 28px
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 18px 0
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <h1>台達新風機 · HomeKit 使用說明</h1>
+      <p class="muted">Apple「家庭」App 控制項功能總覽</p>
+      <span class="badge">RS-485 / Modbus &nbsp;·&nbsp; HomeKit &nbsp;·&nbsp; MQTT</span>
+    </header>
+
+    <section>
+      <h2><span class="ic">🏠</span>加入「家庭」App 後你會看到</h2>
+      <p>本設備在 Apple「家庭」App 中會出現以下幾個控制格,分別對應新風機的電源、運轉模式與濾網狀態:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>控制格</th>
+            <th>類型</th>
+            <th>作用</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>電源</td>
+            <td>開關</td>
+            <td>整台新風機的總開關</td>
+          </tr>
+          <tr>
+            <td>多段調速</td>
+            <td>風扇</td>
+            <td>進入多段模式,並用滑桿調 1–17 段風速</td>
+          </tr>
+          <tr>
+            <td>低風量</td>
+            <td>開關</td>
+            <td>切到固定低速</td>
+          </tr>
+          <tr>
+            <td>高風量</td>
+            <td>開關</td>
+            <td>切到固定高速</td>
+          </tr>
+          <tr>
+            <td>待機</td>
+            <td>開關</td>
+            <td>通電但不送風(休止)</td>
+          </tr>
+          <tr>
+            <td>濾網管理</td>
+            <td>空氣清淨機</td>
+            <td>濾網壽命、更換提示、清洗重置</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note muted">小提示:控制格的名稱可在「家庭」App 中長按 → 設定 自行改名或分房間。</div>
+    </section>
+
+    <section>
+      <h2><span class="ic">🎛️</span>運轉模式:四選一(互斥)</h2>
+      <p><strong>多段調速、低風量、高風量、待機</strong> 四者<strong>同一時間只會有一個生效</strong>,就像原廠面板按鈕循環一樣。開啟其中一個,其餘會自動關閉。</p>
+
+      <div class="tile">
+        <div class="em">🌀</div>
+        <div class="body">
+          <h3>多段調速(風扇格)</h3>
+          <p>打開這個「風扇」即進入<strong>多段模式</strong>,再左右拖動滑桿設定 <strong>1–17 段</strong>風速;數字越大風越強。</p>
+          <p class="muted">拖動滑桿時會自動切到多段模式,不必先按其他鍵。</p>
+          <div class="note warn"><strong>依型號而定:</strong>多段 1–17 段調速為部分機型才具備的功能。若您的機型不支援,此滑桿仍會顯示,但拖動不會改變風速(其餘模式不受影響)。
+          </div>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="em">🍃</div>
+        <div class="body">
+          <h3>低風量 / 高風量(開關格)</h3>
+          <p>固定速度模式,不需要調段數。打開「低風量」或「高風量」即切換過去,多段與另一個固定檔會自動關閉。</p>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="em">😴</div>
+        <div class="body">
+          <h3>待機(開關格)</h3>
+          <p>讓機器<strong>通電但不主動送風</strong>的休止狀態。把正在運轉的模式關掉時,機器就會回到待機。</p>
+          <div class="note warn"><strong>注意:</strong>待機和「電源」關閉<strong>不一樣</strong>——待機仍通電待命,電源關閉才是整台停機。</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="ic">⚡</span>電源與模式的關係</h2>
+      <ul>
+        <li><strong>「電源」開關</strong>是總開關;關閉後整台停止。</li>
+        <li>直接開啟 <span class="pill">多段調速</span><span class="pill">低風量</span><span class="pill">高風量</span>
+          任一個,機器會<strong>自動上電</strong>並進入該模式。</li>
+        <li>選擇模式時,其他模式格會即時同步為關閉(恆保持一個生效)。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="ic">🌬️</span>濾網管理</h2>
+      <p>「濾網管理」格顯示濾網相關資訊與維護操作:</p>
+      <ul>
+        <li><strong>濾網壽命</strong>:剩餘百分比(依已使用時數 / 設定壽命計算)。</li>
+        <li><strong>更換提示</strong>:需要更換濾網時,會顯示濾網警示。</li>
+        <li><strong>清洗 / 重置</strong>:更換或清洗後,執行重置把使用時數歸零。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="ic">📲</span>首次配對</h2>
+      <ol class="steps">
+        <li>打開 iPhone / iPad 的「家庭」App,點右上角 <strong>＋ → 加入配件</strong>。</li>
+        <li>掃描設備上的 <strong>HomeKit 設定碼(QR Code)</strong>,或手動輸入 8 位數配對碼。</li>
+        <li>依畫面指示指定房間並命名,即完成加入。</li>
+      </ol>
+      <div class="note muted">設備需先連上與 iPhone 同一個 Wi-Fi 網路。若配對失敗,請確認設備已開機且指示燈為恆亮(已連網)。</div>
+    </section>
+
+    <section>
+      <h2><span class="ic">❓</span>常見問題</h2>
+      <h3>關掉「低風量」後,為什麼機器變成待機而不是關機?</h3>
+      <p>因為關掉運轉模式只是「停止送風」,電源仍開著,所以進入待機。要整台停機請關「電源」。</p>
+      <h3>多段調速的滑桿在「家庭」App 看起來像百分比?</h3>
+      <p>Apple「家庭」App 的風扇滑桿以填充比例顯示;實際對應 1–17 段。使用 Eve 等第三方 HomeKit App 可看到明確的段位數字。</p>
+      <h3>用原廠面板操作,HomeKit 會同步嗎?</h3>
+      <p>會。設備會定期回讀狀態,面板上的變更會反映到「家庭」App 對應的控制格。</p>
+    </section>
+
+    <footer>
+      台達新風機 HomeKit 整合 · 使用者功能說明
+    </footer>
+
+  </div>
+</body>
+
+</html>

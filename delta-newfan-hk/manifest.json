@@ -1,0 +1,16 @@
+{
+    "name": "delta-newfan-hk",
+    "version": "1.0",
+    "home_assistant_domain": "esphome",
+    "new_install_prompt_erase": false,
+    "builds": [
+        {
+            "chipFamily": "ESP32-C3",
+            "ota": {
+                "path": "https://raw.githubusercontent.com/maxrd/EsphomeOTA/main/delta-erv-hk/delta-newfan.ota_1.0.0.bin",
+                "md5": "7b6a9d87b05c3d7852e71bc196ecbbe6",
+                "summary": ""
+            }
+        }
+    ]
+}
